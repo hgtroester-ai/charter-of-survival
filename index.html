@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charta des gemeinsamen Überlebens</title>
+    <style>
+        /* Grunddesign */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --font-main: 'Georgia', serif;
+            --font-headings: 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-main);
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-color);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        header h1 {
+            font-family: var(--font-headings);
+            font-size: 2.5rem;
+            margin: 0;
+            font-weight: 300;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin: 0.5rem 0 0;
+            font-weight: 300;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--secondary-color);
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-family: var(--font-headings);
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            background-color: white;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-family: var(--font-headings);
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        /* Charta Text */
+        .charta-text {
+            white-space: pre-line;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .charta-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .charta-text strong {
+            color: var(--primary-color);
+        }
+
+        /* Like Button */
+        .like-section {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .like-button {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: var(--font-headings);
+        }
+
+        .like-button:hover {
+            background-color: #c0392b;
+        }
+
+        .like-counter {
+            font-size: 1.2rem;
+            margin-top: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            main {
+                padding: 0 0.5rem;
+            }
+            section {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Charta des gemeinsamen Überlebens</h1>
+        <p>Eine Erklärung der Erdenbürger</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#charta">Die Charta</a>
+        <a href="#autoren">Wer steht dahinter?</a>
+        <a href="#rechtliches">Rechtliches</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Einführung -->
+        <section id="einfuehrung">
+            <h2>Eine Charta für die Menschheit</h2>
+            <p>
+                Wir, die Menschen der Erde, teilen eine gemeinsame Heimat – und eine gemeinsame Zukunft.
+                Diese Charta ist ein Aufruf, unsere Unterschiede zu feiern und gleichzeitig unsere
+                gemeinsame Verantwortung anzuerkennen. Sie ist kein Vertrag, keine Religion und keine Ideologie.
+                Sie ist eine Erinnerung daran, dass wir nur eine Erde haben – und dass wir sie entweder
+                gemeinsam bewahren oder gemeinsam verlieren werden.
+            </p>
+            <p>
+                <strong>Unterstütze diese Charta, teile sie und lebe ihre Prinzipien.</strong>
+            </p>
+        </section>
+
+        <!-- Like Button -->
+        <div class="like-section">
+            <p>Gefällt dir diese Charta? Zeige deine Unterstützung!</p>
+            <button class="like-button" onclick="incrementLike()">👍 Ich unterstütze die Charta</button>
+            <div class="like-counter">
+                <span id="likeCounter">0</span> Menschen unterstützen diese Charta.
+            </div>
+        </div>
+
+        <!-- Die Charta -->
+        <section id="charta">
+            <h2>Die Charta im Wortlaut</h2>
+            <div class="charta-text">
+<p><strong>Präambel</strong></p>
+
+Wir, die Menschen der Erde, erkennen an, dass wir trotz aller Unterschiede eine gemeinsame Heimat besitzen.
+
+Unsere Hautfarbe, unsere Sprache, unsere Kultur, unsere Herkunft, unser Geschlecht, unsere Religion oder unsere Weltanschauung unterscheiden uns. Unsere Zukunft jedoch teilen wir.
+
+Zum ersten Mal in der Geschichte besitzt die Menschheit die technischen Möglichkeiten, den gesamten Planeten zu verändern – zum Guten wie zum Schlechten. Gleichzeitig stehen wir vor Herausforderungen, die kein Staat, keine Religion, keine Wirtschaft und keine einzelne Nation allein lösen kann.
+
+Klimawandel, Kriege, Hunger, Krankheiten, Ressourcenknappheit, Umweltzerstörung und digitale Manipulation kennen keine Grenzen.
+
+Deshalb erklären wir:
+
+<strong>Unsere gemeinsame Zukunft ist wichtiger als unsere Trennung.</strong>
+
+⸻
+
+<p><strong>Artikel 1 – Die Würde des Menschen</strong></p>
+
+Jeder Mensch besitzt dieselbe unveräußerliche Würde.
+
+Kein Mensch ist aufgrund seines Geschlechts, seiner Herkunft, seiner Hautfarbe, seiner Sprache, seiner Religion, seiner Weltanschauung, seiner sexuellen Orientierung, seines Alters, einer Behinderung oder seines sozialen Status mehr oder weniger wert.
+
+Die Würde des Menschen ist unteilbar.
+
+⸻
+
+<p><strong>Artikel 2 – Die Erde ist unsere gemeinsame Heimat</strong></p>
+
+Wir besitzen diesen Planeten nicht.
+
+Wir haben ihn von vergangenen Generationen übernommen und tragen Verantwortung gegenüber den kommenden Generationen.
+
+Unser Handeln muss stets die langfristigen Folgen für Mensch, Natur und Klima berücksichtigen.
+
+⸻
+
+<p><strong>Artikel 3 – Das Recht auf Leben</strong></p>
+
+Das Recht auf Leben steht über wirtschaftlichen Interessen, politischer Macht und ideologischen Überzeugungen.
+
+Kein wirtschaftlicher Gewinn rechtfertigt die Zerstörung unserer Lebensgrundlagen.
+
+⸻
+
+<p><strong>Artikel 4 – Verantwortung statt Schuld</strong></p>
+
+Diese Charta sucht keine Schuldigen.
+
+Sie ruft alle Menschen zur gemeinsamen Verantwortung auf.
+
+Verantwortung beginnt bei jedem Einzelnen und endet nicht an Staatsgrenzen.
+
+⸻
+
+<p><strong>Artikel 5 – Wahrheit und Wissen</strong></p>
+
+Wissenschaftliche Erkenntnisse, überprüfbare Tatsachen und offener Dialog bilden die Grundlage verantwortungsvoller Entscheidungen.
+
+Unwahrheiten, gezielte Desinformation und bewusste Manipulation gefährden den Zusammenhalt der Menschheit.
+
+Jeder Mensch trägt Verantwortung für den sorgfältigen Umgang mit Informationen.
+
+⸻
+
+<p><strong>Artikel 6 – Frieden</strong></p>
+
+Gewalt darf niemals zum Normalzustand werden.
+
+Konflikte sollen durch Dialog, Vermittlung und internationales Recht gelöst werden.
+
+Krieg bedeutet immer menschliches Leid.
+
+Frieden ist keine Schwäche, sondern die höchste Form gemeinsamer Stärke.
+
+⸻
+
+<p><strong>Artikel 7 – Vielfalt</strong></p>
+
+Die Vielfalt der Kulturen ist kein Hindernis.
+
+Sie ist ein Reichtum der Menschheit.
+
+Multikulturelles Zusammenleben gelingt dort, wo gegenseitiger Respekt, gleiche Rechte und gleiche Pflichten gelten.
+
+Niemand muss seine Identität aufgeben, damit Gemeinschaft entstehen kann.
+
+⸻
+
+<p><strong>Artikel 8 – Freiheit und Verantwortung</strong></p>
+
+Freiheit bedeutet nicht, alles tun zu dürfen.
+
+Freiheit bedeutet, Verantwortung für die Folgen des eigenen Handelns zu übernehmen.
+
+Persönliche Freiheit endet dort, wo sie die Freiheit und Würde anderer zerstört.
+
+⸻
+
+<p><strong>Artikel 9 – Macht</strong></p>
+
+Macht ist niemals Selbstzweck.
+
+Politische, wirtschaftliche und gesellschaftliche Macht dient dem Wohl der Gemeinschaft.
+
+Wo Macht sich jeder Kontrolle entzieht, verliert sie ihre Legitimation.
+
+⸻
+
+<p><strong>Artikel 10 – Die digitale Menschheit</strong></p>
+
+Die Digitalisierung verbindet heute nahezu alle Menschen.
+
+Sie darf nicht zur Spaltung, Manipulation oder Überwachung missbraucht werden.
+
+Digitale Technologien sollen dem Wissen, der Bildung, der Transparenz, der Zusammenarbeit und der demokratischen Beteiligung dienen.
+
+Technologie ist Werkzeug der Menschheit – niemals ihr Herr.
+
+⸻
+
+<p><strong>Artikel 11 – Die Verantwortung jeder Generation</strong></p>
+
+Jede Generation ist verantwortlich für die Welt, die sie hinterlässt.
+
+Nicht kurzfristiger Vorteil, sondern langfristige Lebensfähigkeit muss Maßstab politischen und wirtschaftlichen Handelns sein.
+
+⸻
+
+<p><strong>Artikel 12 – Die Gemeinschaft der Erdenbürger</strong></p>
+
+Wir verstehen uns als Erdenbürger.
+
+Unsere Nationen bleiben Teil unserer Identität.
+
+Doch unsere gemeinsame Menschlichkeit steht über allen Grenzen.
+
+Wenn Menschen leiden, betrifft es letztlich die gesamte Menschheit.
+
+Wenn Menschen Frieden schaffen, profitieren wir alle.
+
+⸻
+
+<p><strong>Schlusswort</strong></p>
+
+Diese Charta fordert keine einheitliche Religion.
+
+Sie verlangt keine gemeinsame Ideologie.
+
+Sie schreibt keine Wirtschaftsform vor.
+
+Sie erhebt keinen Menschen über einen anderen.
+
+Sie erinnert uns lediglich an eine einfache Wahrheit:
+
+Wir besitzen nur eine Erde.
+
+Wir teilen nur eine Zukunft.
+
+Und wir werden sie entweder gemeinsam bewahren oder gemeinsam verlieren.
+
+Diese Charta gehört keinem Staat, keiner Partei, keiner Religion und keinem Unternehmen.
+
+Sie gehört allen Menschen.
+
+Heute.
+
+Morgen.
+
+Und allen Generationen, die nach uns kommen.
+            </div>
+        </section>
+
+        <!-- Wer steht dahinter? -->
+        <section id="autoren">
+            <h2>Wer steht dahinter?</h2>
+            <p>
+                Diese Charta wurde von <strong>Hans-Georg Tröster</strong> initiiert – als Aufruf an die Menschheit,
+                ihre gemeinsame Verantwortung zu erkennen. Sie ist ein offenes Dokument, das von allen Menschen
+                mitgestaltet und unterstützt werden kann.
+            </p>
+            <p>
+                Wenn du dich beteiligen möchtest, schreibe eine E-Mail an:
+                <a href="mailto:kontakt@erdencharta.org">kontakt@erdencharta.org</a>
+                (Hinweis: Diese E-Mail-Adresse ist ein Platzhalter. Ersetze sie durch deine eigene.)
+            </p>
+        </section>
+
+        <!-- Rechtliches -->
+        <section id="rechtliches">
+            <h2>Rechtliches</h2>
+            <h3>Haftungsausschluss</h3>
+            <p>
+                Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt. Dennoch kann für die Richtigkeit,
+                Vollständigkeit und Aktualität der Inhalte keine Gewähr übernommen werden.
+            </p>
+            <p>
+                Als Dienstleister sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen
+                Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Dienstleister jedoch nicht verpflichtet,
+                übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf
+                eine rechtswidrige Tätigkeit hinweisen.
+            </p>
+            <p>
+                Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen
+                bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer
+                konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir
+                diese Inhalte umgehend entfernen.
+            </p>
+
+            <h3>Urheberrecht</h3>
+            <p>
+                Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen
+                Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen
+                des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+            </p>
+            <p>
+                Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.
+            </p>
+            <p>
+                Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter
+                beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine
+                Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden
+                von Rechtsverletzungen werden wir solche Inhalte umgehend entfernen.
+            </p>
+
+            <h3>Datenschutz</h3>
+            <p>
+                Diese Website erfasst keine persönlichen Daten. Der Like-Button speichert keine Nutzerdaten und dient
+                ausschließlich der Anzeige einer Unterstützerzahl (lokal im Browser).
+            </p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p><strong>Charta des gemeinsamen Überlebens</strong></p>
+        <p>Eine Erklärung der Erdenbürger | 2026</p>
+        <p>
+            <a href="#" style="color: white;">Impressum</a> |
+            <a href="#" style="color: white;">Datenschutz</a>
+        </p>
+    </footer>
+
+    <!-- JavaScript für Like-Button -->
+    <script>
+        // Like-Counter (speichert im LocalStorage des Browsers)
+        function incrementLike() {
+            let counter = localStorage.getItem('likeCounter');
+            if (counter === null) {
+                counter = 0;
+            } else {
+                counter = parseInt(counter);
+            }
+            counter++;
+            localStorage.setItem('likeCounter', counter);
+            document.getElementById('likeCounter').textContent = counter;
+
+            // Optional: Danke-Meldung anzeigen
+            alert("Danke für deine Unterstützung! 🙏");
+        }
+
+        // Lade den Counter beim Seitenstart
+        window.onload = function() {
+            let counter = localStorage.getItem('likeCounter');
+            if (counter !== null) {
+                document.getElementById('likeCounter').textContent = counter;
+            }
+        };
+    </script>
+</body>
+</html>
