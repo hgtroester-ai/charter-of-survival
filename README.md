@@ -1,5 +1,5 @@
 # charter-of-survival
-A Charter for Humanity: A declaration of Shared Survival, and a Call to Recognise Our Collective Responsibility for the Earth and Future Generations
+A Charter for Humanity: A declaration of Shared Survival, and a Call to Recognise Our Collective Responsibility for the Earth and Future Generations.
 # 🌍 Charter of Survival / Charta des gemeinsamen Überlebens
 
 *A Declaration by the Citizens of Earth*
